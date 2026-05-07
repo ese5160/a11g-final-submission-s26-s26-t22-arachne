@@ -143,6 +143,6 @@
 
 Do *not* commit any of your source code to this repository. Rather, provide links to the other GitHub repository you've already been using with your firmware.
 
-- A link to your final embedded C firmware codebases
-- A link to your Node-RED dashboard code
-- Links to any other software required for the functionality of your device
+- A link to your final embedded C firmware codebases: [https://github.com/ese5160/final-project-firmware-s26-t22-arachne-1/tree/main]()
+- A link to your Node-RED dashboard code:[ https://github.com/ese5160/final-project-firmware-s26-t22-arachne-1/blob/main/NodeRed/A11_NodeRed.json]()
+- Links to any other software required for the functionality of your device: N/A
