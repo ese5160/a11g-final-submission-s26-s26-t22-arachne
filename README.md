@@ -104,18 +104,6 @@
 ## 4. Project Photos & Screenshots
 
 1. Casework
-   ![1778124661869](image/README/1778124661869.png)
-
-   ![1778124675220](image/README/1778124675220.png)
-2. Block diagram of your system (You may need to update this to reflect changes throughout the semester.)
-3. Block diagram of your system
-4. ![1778126293938](https://file+.vscode-resource.vscode-cdn.net/c%3A/a11g-final-submission-s26-s26-t22-arachne/image/README/1778126293938.png)
-
-## 5. Codebase
-
-## 4. Project Photos & Screenshots
-
-1. Casework
 
    ![1778123212804](image/README/1778123212804.png)
 
@@ -149,7 +137,7 @@
    ![1778124675220](image/README/1778124675220.png)
 9. Block diagram of your system (You may need to update this to reflect changes throughout the semester.)
 
-   ![1778126293938](https://file+.vscode-resource.vscode-cdn.net/c%3A/a11g-final-submission-s26-s26-t22-arachne/image/README/1778126293938.png)
+   ![1778126293938](image/README/1778126293938.png)
 
 ## 5. Codebase
 
