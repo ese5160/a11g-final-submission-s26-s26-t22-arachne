@@ -13,7 +13,7 @@
 
 **GitHub Repository URL: https://github.com/ese5160/a11g-final-submission-s26-s26-t22-arachne.git**
 
-## 1. Video Presentation: [https://drive.google.com/file/d/1NOnBmTIpOmjb-eG-j_7bhOsVzotfvLr7/view?usp=sharing](https://drive.google.com/file/d/1NOnBmTIpOmjb-eG-j_7bhOsVzotfvLr7/view?usp=sharing) / [https://www.youtube.com/watch?v=X5l9KKgC7CU]()
+## 1. Video Presentation: [https://drive.google.com/file/d/1NOnBmTIpOmjb-eG-j_7bhOsVzotfvLr7/view?usp=sharing](https://drive.google.com/file/d/1NOnBmTIpOmjb-eG-j_7bhOsVzotfvLr7/view?usp=sharing)
 
 ## 2. Project Summary:
 
@@ -27,9 +27,7 @@
 
   * Explain how your Internet-connected device is designed: The core of our  IoT device design is the integration of four break-beam IR sensors, one for each denomination of coin (nickel, quarter, penny, and dime). When an emitter-receiver pair is broken, that sensor triggers a deposit event.
   * ![1778125719013](image/README/1778125719013.png)
-* **System Block Diagram:**
-
-  ![1778128709822](image/README/1778128709822.png)
+* **System Block Diagram:**![1778126293938](image/README/1778126293938.png)
 * **Challenges**
 
   * Where did you face difficulties? How did you solve them? This could be in firmware, hardware, software, integration, etc.:
@@ -61,7 +59,7 @@
     * We would like to bring up our 2nd PCBA and validate the battery validation so that all debugging starts and ends with the battery being plugged in. Initially, we had done all debugging with USB power and then attempted to shift to battery power only. We could then troubleshoot the motor separately and expand the alarm features so that users can set multiple alarm sounds if they so choose.
   * What did you learn in ESE5160 through the lectures, assignments, and this course-long prototyping project?
 
-    * RTOS task scheduling content along with the bootloader quiz were essential in understanding the key turning points of our project. Realizing that the PSRAM was preventing our GPIO pull-down toggle from ever executing allowed us to pivot away from using those pins and find a solution that worked. We also greatly valued the board bringup assignment, especially the thermal camera and E-load testing procedures.
+    * RTOS task scheduling and the bootloader quiz were essential in understanding the key turning points of our project.
 * **Project Links**
 
   * Provide a URL to your Node-RED instance for our review (make sure it’s running on your Azure instance!):
@@ -75,9 +73,9 @@
 
 | ID     | Description                                                                                                                                                    | Result             | Validation Method                                                                                                                                 |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| HRS-01 | The piggy bank shall host 4 sensor slots for each denomination of coin (quarter, nickel, penny, dime).                                                         | Achieved           | Physical inspection to see that there are 4 coin holes for each denomination                                                                       |
+| HRS-01 | The piggy bank shall host 4 sensor slots for each denomination of coin (quarter, nickel, penny, dime).                                                         | Achieved           | Physical inspection to see that there are 4 coin holes for each denomination.                                                                      |
 | HRS-02 | The piggy bank shall have 2 servo motors, one driving each ear, each capable of at least 30° of rotation                                                      | Not Achieved       | Due to hardware constraints and time limitations, the PWM debugging process could not be completed.                                                |
-| HRS-03 | The piggy bank shall have 1 servo motor driving the tail, capable of at least 45° of rotation.                                                                | Not Achieved       | Not enough time to debug the PWM signals to drive the servo motor                                                                                  |
+| HRS-03 | The piggy bank shall have 1 servo motor driving the tail, capable of at least 45° of rotation.                                                                | Not Achieved       | Not enough time to debug the PWM signals to drive the servo motor.                                                                                 |
 | HRS-04 | The piggy bank shall host a speaker with a minimum output of 60 dB at 0.5m.                                                                                    | Achieved           | Tested speaker using a phone dB meter at 0.5 m; measured output was above 60 dB during oink playback.                                              |
 | HRS-05 | The piggy bank shall host a bright and legible LCD Screen, displying the balance inside.                                                                       | Not Achieved       | Tested LCD by powering system. SPI integration with PCB could not be completed due to time constraints                                             |
 | HRS-06 | The SIWG917Y121MGABA should operate within its specified voltage range (3.0V to 3.63 V).                                                                       | Achieved           | Measured MCU supply voltage using a multimeter; voltage stayed within 3.0–3.63 V during operation.                                                |
@@ -143,6 +141,6 @@
 
 Do *not* commit any of your source code to this repository. Rather, provide links to the other GitHub repository you've already been using with your firmware.
 
-- A link to your final embedded C firmware codebases: [https://github.com/ese5160/final-project-firmware-s26-t22-arachne-1/tree/main]()
-- A link to your Node-RED dashboard code: [https://github.com/ese5160/final-project-firmware-s26-t22-arachne-1/blob/main/NodeRed/A11_NodeRed.json]()
+- A link to your final embedded C firmware codebases
+- A link to your Node-RED dashboard code
 - Links to any other software required for the functionality of your device
