@@ -18,8 +18,6 @@
 ## 2. Project Summary
 
 ## 3. Hardware & Software Requirements
-## 3. Hardware & Software Requirements
-
 
 ## HRS
 
@@ -54,14 +52,14 @@
 ## 4. Project Photos & Screenshots
 
 1. Casework
-@@ -53,7 +84,9 @@
+   @@ -53,7 +84,9 @@
    ![1778124661869](image/README/1778124661869.png)
 
    ![1778124675220](image/README/1778124675220.png)
-9. Block diagram of your system (You may need to update this to reflect changes throughout the semester.)
-9. Block diagram of your system
+2. Block diagram of your system (You may need to update this to reflect changes throughout the semester.)
+3. Block diagram of your system
 
-   ![1778125516577](image/README/1778125516577.png)
+   ![1778126293938](image/README/1778126293938.png)
 
 ## 5. Codebase
 
