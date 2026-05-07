@@ -73,33 +73,33 @@
 
 ## HRS
 
-| ID     | Description                                                                                                                                                    | Result             |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| HRS-01 | The piggy bank shall host 4 sensor slots for each denomination of coin (quarter, nickel, penny, dime).                                                         | Achieved           |
-| HRS-02 | The piggy bank shall have 2 servo motors, one driving each ear, each capable of at least 30° of rotation                                                      | Not Achieved       |
-| HRS-03 | The piggy bank shall have 1 servo motor driving the tail, capable of at least 45° of rotation.                                                                | Not Achieved       |
-| HRS-04 | The piggy bank shall host a speaker with a minimum output of 60 dB at 0.5m.                                                                                    | Achieved           |
-| HRS-05 | The piggy bank shall host a bright and legible LCD Screen, displying the balance inside.                                                                       | Not Achieved       |
-| HRS-06 | The SIWG917Y121MGABA should operate within its specified voltage range (3.0V to 3.63 V).                                                                       | Achieved           |
-| HRS-07 | The piggy bank shall use the SIWG917Y121MGABA Wi-Fi-enabled MCU for firmware.                                                                                  | Achieved           |
-| HRS-08 | Upon coin insertion detection, all output peripherals (ear servos, tail servo, speaker, LCD) shall respond within 3s of the sensor trigger.                    | Partially achieved |
-| HRS-09 | Each optical sensor shall detect coin insertion with a minimum accuracy of 95% across 20 consecutive test drops per denomination under normal indoor lighting. | Achieved           |
-| HRS-10 | The physical encasing should be able to protect the PCB from external environmental factors like dust and water no exposed openings except the 4 coin slots.   | Achieved           |
+| ID     | Description                                                                                                                                                    | Result             | Validation Method                                                                                                                                 |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| HRS-01 | The piggy bank shall host 4 sensor slots for each denomination of coin (quarter, nickel, penny, dime).                                                         | Achieved           | Physical inspection to see that there are 4 coin holes for each denomination                                                                       |
+| HRS-02 | The piggy bank shall have 2 servo motors, one driving each ear, each capable of at least 30° of rotation                                                      | Not Achieved       | Due to hardware constraints and time limitations, the PWM debugging process could not be completed.                                                |
+| HRS-03 | The piggy bank shall have 1 servo motor driving the tail, capable of at least 45° of rotation.                                                                | Not Achieved       | Not enough time to debug the PWM signals to drive the servo motor                                                                                  |
+| HRS-04 | The piggy bank shall host a speaker with a minimum output of 60 dB at 0.5m.                                                                                    | Achieved           | Tested speaker using a phone dB meter at 0.5 m; measured output was above 60 dB during oink playback.                                              |
+| HRS-05 | The piggy bank shall host a bright and legible LCD Screen, displying the balance inside.                                                                       | Not Achieved       | Tested LCD by powering system. SPI integration with PCB could not be completed due to time constraints                                             |
+| HRS-06 | The SIWG917Y121MGABA should operate within its specified voltage range (3.0V to 3.63 V).                                                                       | Achieved           | Measured MCU supply voltage using a multimeter; voltage stayed within 3.0–3.63 V during operation.                                                |
+| HRS-07 | The piggy bank shall use the SIWG917Y121MGABA Wi-Fi-enabled MCU for firmware.                                                                                  | Achieved           | Verified firmware was flashed and executed on the SIWG917Y121MGABA Wi-Fi MCU using serial monitor                                                  |
+| HRS-08 | Upon coin insertion detection, all output peripherals (ear servos, tail servo, speaker, LCD) shall respond within 3s of the sensor trigger.                    | Partially achieved | Measured delay from sensor trigger to output response using timestamps; speaker/cloud response was under 3 s, but servo/LCD could no be integrated |
+| HRS-09 | Each optical sensor shall detect coin insertion with a minimum accuracy of 95% across 20 consecutive test drops per denomination under normal indoor lighting. | Achieved           | Dropped each denomination 20 times through its sensor slot; each sensor detected at least 19/20 drops, meeting 95% accuracy.                       |
+| HRS-10 | The physical encasing should be able to protect the PCB from external environmental factors like dust and water no exposed openings except the 4 coin slots.   | Achieved           | Inspected enclosure after assembly; PCB was covered and protected with no exposed openings except the 4 coin slots.                                |
 
 ## SRS
 
-| ID     | Description                                                                                                                                              | Result       |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| SRS-01 | The system shall initialize counters for each denomination to track their quantity within 3s of power-on..                                               | Achieved     |
-| SRS-02 | When an optical cross-beam sensor detects a deposit, the system shall increment the counter for that denomination by 1.                                  | Achieved     |
-| SRS-03 | The system shall log deposits in JSON format.                                                                                                            | Achieved     |
-| SRS-04 | When a deposit is logged, the log shall include the date, denomination, and quantity of the coin.                                                        | Achieved     |
-| SRS-05 | When a deposit is logged, the system shall transmit it wirelessly to the cloud application within 3s of the deposit event under normal Wi-Fi conditions. | Achieved     |
-| SRS-06 | The LCD shall display the updated total balance within 3s of a deposit event.                                                                            | Achieved     |
-| SRS-07 | The Node-RED dashboard shall update the data within 3 seconds of a deposit event being transmitted.                                                      | Achieved     |
-| SRS-08 | The system shall complete full boot and be ready to detect coin insertions within 5 seconds of power-on.                                                 | Achieved     |
-| SRS-09 | Each ear servo and the tail servo shall return to their resting position within 10 seconds of starting rotation.                                         | Not Achieved |
-| SRS-10 | The speaker shall play the oink noise at a consistent volume level on every deposit trigger.                                                             | Achieved     |
+| ID     | Description                                                                                                                                              | Result       | Validation Methods                                                                                                          |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| SRS-01 | The system shall initialize counters for each denomination to track their quantity within 3s of power-on.                                                | Achieved     | Powered on the system and checked serial output; all denomination counters initialized within 3 s.                           |
+| SRS-02 | When an optical cross-beam sensor detects a deposit, the system shall increment the counter for that denomination by 1.                                  | Achieved     | Inserted test coins through each slot and monitored counter values; each valid detection increased the correct counter by 1. |
+| SRS-03 | The system shall log deposits in JSON format.                                                                                                            | Achieved     | Checked serial/MQTT payload output after deposits; deposit logs were generated in valid JSON format.                         |
+| SRS-04 | When a deposit is logged, the log shall include the date, denomination, and quantity of the coin.                                                        | Achieved     | Verified sample JSON logs; each log included date/time, denomination, and quantity fields.                                   |
+| SRS-05 | When a deposit is logged, the system shall transmit it wirelessly to the cloud application within 3s of the deposit event under normal Wi-Fi conditions. | Achieved     | Compared deposit trigger time with MQTT receive time in Node-RED; messages were received within 3 s under normal Wi-Fi.      |
+| SRS-06 | The LCD shall display the updated total balance within 3s of a deposit event.                                                                            | Not Achieved | The LCD was working independently, but could not be integrated with the rest of the system.                                  |
+| SRS-07 | The Node-RED dashboard shall update the data within 3 seconds of a deposit event being transmitted.                                                      | Achieve      | Compared MQTT publish time with Node-RED dashboard update; dashboard updated within 3 s after deposit transmission.          |
+| SRS-08 | The system shall complete full boot and be ready to detect coin insertions within 5 seconds of power-on.                                                 | Achieved     | Timed system from power-on to first successful sensor detection; system was ready in under 5 s.                              |
+| SRS-09 | Each ear servo and the tail servo shall return to their resting position within 10 seconds of starting rotation.                                         | Not Achieved | Servo motors could not be integrated with the rest of the system                                                             |
+| SRS-10 | The speaker shall play the oink noise at a consistent volume level on every deposit trigger.                                                             | Achieved     | Triggered multiple deposits and measured/observed speaker output; oink sound played at a consistent volume each time.        |
 
 ## 4. Project Photos & Screenshots
 
@@ -143,6 +143,6 @@
 
 Do *not* commit any of your source code to this repository. Rather, provide links to the other GitHub repository you've already been using with your firmware.
 
-- A link to your final embedded C firmware codebases: [https://github.com/ese5160/final-project-firmware-s26-t22-arachne-1/tree/main]()
-- A link to your Node-RED dashboard code:[ https://github.com/ese5160/final-project-firmware-s26-t22-arachne-1/blob/main/NodeRed/A11_NodeRed.json]()
-- Links to any other software required for the functionality of your device: N/A
+- A link to your final embedded C firmware codebases
+- A link to your Node-RED dashboard code
+- Links to any other software required for the functionality of your device
