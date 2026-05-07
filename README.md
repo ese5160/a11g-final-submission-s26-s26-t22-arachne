@@ -13,7 +13,7 @@
 
 **GitHub Repository URL: https://github.com/ese5160/a11g-final-submission-s26-s26-t22-arachne.git**
 
-## 1. Video Presentation: [https://drive.google.com/file/d/1NOnBmTIpOmjb-eG-j_7bhOsVzotfvLr7/view?usp=sharing](https://drive.google.com/file/d/1NOnBmTIpOmjb-eG-j_7bhOsVzotfvLr7/view?usp=sharing)
+## 1. Video Presentation: [https://drive.google.com/file/d/1NOnBmTIpOmjb-eG-j_7bhOsVzotfvLr7/view?usp=sharing](https://drive.google.com/file/d/1NOnBmTIpOmjb-eG-j_7bhOsVzotfvLr7/view?usp=sharing) / [https://www.youtube.com/watch?v=X5l9KKgC7CU]()
 
 ## 2. Project Summary:
 
@@ -59,7 +59,7 @@
     * We would like to bring up our 2nd PCBA and validate the battery validation so that all debugging starts and ends with the battery being plugged in. Initially, we had done all debugging with USB power and then attempted to shift to battery power only. We could then troubleshoot the motor separately and expand the alarm features so that users can set multiple alarm sounds if they so choose.
   * What did you learn in ESE5160 through the lectures, assignments, and this course-long prototyping project?
 
-    * RTOS task scheduling and the bootloader quiz were essential in understanding the key turning points of our project.
+    * RTOS task scheduling content along with the bootloader quiz were essential in understanding the key turning points of our project. Realizing that the PSRAM was preventing our GPIO pull-down toggle from ever executing allowed us to pivot away from using those pins and find a solution that worked. We also greatly valued the board bringup assignment, especially the thermal camera and E-load testing procedures.
 * **Project Links**
 
   * Provide a URL to your Node-RED instance for our review (make sure it’s running on your Azure instance!):
@@ -141,6 +141,6 @@
 
 Do *not* commit any of your source code to this repository. Rather, provide links to the other GitHub repository you've already been using with your firmware.
 
-- A link to your final embedded C firmware codebases
-- A link to your Node-RED dashboard code
+- A link to your final embedded C firmware codebases: [https://github.com/ese5160/final-project-firmware-s26-t22-arachne-1/tree/main]()
+- A link to your Node-RED dashboard code: [https://github.com/ese5160/final-project-firmware-s26-t22-arachne-1/blob/main/NodeRed/A11_NodeRed.json]()
 - Links to any other software required for the functionality of your device
