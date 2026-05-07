@@ -38,9 +38,21 @@
 
    ![1778123433674](image/README/1778123433674.png)
 5. The Altium Board design in 2D view (screenshot)
+
+   ![1778124479725](image/README/1778124479725.png)
 6. The Altium Board design in 3D view (screenshot)
+
+   ![1778124522446](image/README/1778124522446.png)
+
+   ![1778124547294](image/README/1778124547294.png)
 7. Node-RED dashboard (screenshot)
+
+   ![1778124739015](image/README/1778124739015.png)
 8. Node-RED backend (screenshot)
+
+   ![1778124661869](image/README/1778124661869.png)
+
+   ![1778124675220](image/README/1778124675220.png)
 9. Block diagram of your system (You may need to update this to reflect changes throughout the semester.)
 
 ## 5. Codebase
