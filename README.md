@@ -2,16 +2,16 @@
 
 # a11g-final-submission
 
-**Team Number:**
+**Team Number: 22**
 
-**Team Name:**
+**Team Name: Arachne**
 
-| Team Member Name | Email Address | GitHub Username |
-| ---------------- | ------------- | --------------- |
-| [Name 1]         | [Email 1]     | [Username 1]    |
-| [Name 2]         | [Email 2]     | [Username 2]    |
+| Team Member Name | Email Address          | GitHub Username |
+| ---------------- | ---------------------- | --------------- |
+| Amehja Williams  | amehjaw@seas.upenn.edu | prm2023         |
+| Lubha Churiwala  | lubha@seas.upenn.edu   | LubhaC          |
 
-**GitHub Repository URL:**
+**GitHub Repository URL: https://github.com/ese5160/a11g-final-submission-s26-s26-t22-arachne.git**
 
 ## 1. Video Presentation
 
