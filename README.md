@@ -27,9 +27,7 @@
 
   * Explain how your Internet-connected device is designed: The core of our  IoT device design is the integration of four break-beam IR sensors, one for each denomination of coin (nickel, quarter, penny, and dime). When an emitter-receiver pair is broken, that sensor triggers a deposit event.
   * ![1778125719013](image/README/1778125719013.png)
-* **System Block Diagram:**
-
-  ![1778128709822](image/README/1778128709822.png)
+* **System Block Diagram:**![1778126293938](image/README/1778126293938.png)
 * **Challenges**
 
   * Where did you face difficulties? How did you solve them? This could be in firmware, hardware, software, integration, etc.:
@@ -75,9 +73,9 @@
 
 | ID     | Description                                                                                                                                                    | Result             | Validation Method                                                                                                                                 |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| HRS-01 | The piggy bank shall host 4 sensor slots for each denomination of coin (quarter, nickel, penny, dime).                                                         | Achieved           | Physical inspection to see that there are 4 coin holes for each denomination                                                                       |
+| HRS-01 | The piggy bank shall host 4 sensor slots for each denomination of coin (quarter, nickel, penny, dime).                                                         | Achieved           | Physical inspection to see that there are 4 coin holes for each denomination.                                                                      |
 | HRS-02 | The piggy bank shall have 2 servo motors, one driving each ear, each capable of at least 30° of rotation                                                      | Not Achieved       | Due to hardware constraints and time limitations, the PWM debugging process could not be completed.                                                |
-| HRS-03 | The piggy bank shall have 1 servo motor driving the tail, capable of at least 45° of rotation.                                                                | Not Achieved       | Not enough time to debug the PWM signals to drive the servo motor                                                                                  |
+| HRS-03 | The piggy bank shall have 1 servo motor driving the tail, capable of at least 45° of rotation.                                                                | Not Achieved       | Not enough time to debug the PWM signals to drive the servo motor.                                                                                 |
 | HRS-04 | The piggy bank shall host a speaker with a minimum output of 60 dB at 0.5m.                                                                                    | Achieved           | Tested speaker using a phone dB meter at 0.5 m; measured output was above 60 dB during oink playback.                                              |
 | HRS-05 | The piggy bank shall host a bright and legible LCD Screen, displying the balance inside.                                                                       | Not Achieved       | Tested LCD by powering system. SPI integration with PCB could not be completed due to time constraints                                             |
 | HRS-06 | The SIWG917Y121MGABA should operate within its specified voltage range (3.0V to 3.63 V).                                                                       | Achieved           | Measured MCU supply voltage using a multimeter; voltage stayed within 3.0–3.63 V during operation.                                                |
